@@ -16,7 +16,7 @@ int main(){
 	cuenta%=10;
 	pares[cuenta]=-1;
 	
-	for(i=0;i<10;i++){
+	for(i=9;i>=0;i--){
 		printf("\t%d\n",pares[i]);
 	}
 	
