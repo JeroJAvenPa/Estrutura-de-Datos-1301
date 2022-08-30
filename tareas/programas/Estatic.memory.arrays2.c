@@ -31,7 +31,7 @@ int main(){
 		x+=alumnos[i].edad;
 		y+=alumnos[i].calificacion;
 	}
-	//(variable)(operador matematico)=(numero) es equivalente a (var)=(var)(operador matematico)(num)
+	
 	x=(float)x/n;
 	y=(float)y/n;
 	
