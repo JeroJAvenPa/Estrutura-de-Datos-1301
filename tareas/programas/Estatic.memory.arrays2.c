@@ -5,6 +5,8 @@ typedef struct{
 	int edad, calificacion;
 } alumno;
 
+
+
 int main(){
 	alumno alumnos[20];
 	int n, i;
