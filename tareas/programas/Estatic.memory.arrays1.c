@@ -8,7 +8,7 @@ int main(){
 		printf("\t%d\n",pares[i]);
 	}
 	
-	printf("Dame tu número de cuenta: ");
+	printf("Give me your account number :");
 	scanf("%d",&cuenta);
 	
 	system("cls");
