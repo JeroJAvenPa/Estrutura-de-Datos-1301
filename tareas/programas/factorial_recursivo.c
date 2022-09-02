@@ -1,5 +1,5 @@
 #include<stdio.h>
-int number, result,resulti,i;
+int number, result,i;
 
 int recursivo(int num){//o(2n-1)
 
@@ -10,18 +10,9 @@ int recursivo(int num){//o(2n-1)
 
 }
 
-int iterativo(int num){
-    int total = 1;
-    for(i=1; i <= num; i++)
-        total *= i;
-    return(total);
-}
-
 int main(){
     printf("Pls give me a number:");
     scanf("%d",&number);
-    result = iterativo(number);
-    resulti = recursivo(number);
-    printf("The result using iterative (O(n)) is: %d \n",result);
-    printf("The result using recursive (O(2n - 1)) is: %d \n",resulti);
+    result = recursivo(number);
+    printf("The result using recursive (O(2n - 1)) is: %d \n",result);
 }
