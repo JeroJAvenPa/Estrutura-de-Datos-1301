@@ -1,0 +1,40 @@
+# Project: Calcsociales
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ../source/dlist.o maindps.o ../source/heap.o ../source/list.o ../source/queue.o
+LINKOBJ  = ../source/dlist.o maindps.o ../source/heap.o ../source/list.o ../source/queue.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/jeron/Documents/MAC/Estructura de Datos/Ejercicios/code/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/jeron/Documents/MAC/Estructura de Datos/Ejercicios/code/include"
+BIN      = Calcsociales.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+../source/dlist.o: ../source/dlist.c
+	$(CC) -c ../source/dlist.c -o ../source/dlist.o $(CFLAGS)
+
+maindps.o: maindps.c
+	$(CC) -c maindps.c -o maindps.o $(CFLAGS)
+
+../source/heap.o: ../source/heap.c
+	$(CC) -c ../source/heap.c -o ../source/heap.o $(CFLAGS)
+
+../source/list.o: ../source/list.c
+	$(CC) -c ../source/list.c -o ../source/list.o $(CFLAGS)
+
+../source/queue.o: ../source/queue.c
+	$(CC) -c ../source/queue.c -o ../source/queue.o $(CFLAGS)
